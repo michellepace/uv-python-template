@@ -6,7 +6,7 @@
 
     // 🐍 UV PYTHON ENVIRONMENT
     // Run `uv sync` to create .venv/ → restart IDE to activate venv → open NEW terminal
-    // Run `which python` → → should show ../.venv/bin/python (interpretor and dependencies in here)
+    // Run `which python` → should show ../.venv/bin/python (interpreter and dependencies in here)
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python", // this auto detects anyhow
     "python.terminal.activateEnvironment": true, // asks terminal to auto activate UV environment
 
