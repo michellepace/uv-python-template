@@ -1,33 +1,28 @@
 # UV Template for Python Projects
 
-A [uv](https://docs.astral.sh/uv/)-based Python 3.13+ project template configured for test-driven development (pytest) and code quality checks (Ruff, Pyright running before each commit). Supports development in `src/` packages, standalone `scripts/`, and Jupyter `notebooks/`. Complete IDE setup included for VSCode/Cursor.
-
-<div align="center">
-  <a href="docs/notebook.jpg">
-    <img src="docs/notebook.jpg" alt="VS Code screenshot showing test-setup.ipynb notebook with project code integration. The notebook demonstrates importing from uv_template.play and testing the add() function with successful output. Pink arrows point to the kernel selector in the top right, with 'select' annotation indicating where to choose the Python 3.13.5 (.venv) environment." width="800">
-  </a>
-  <p><em>Project Structure (left) with Jupyter Notebook (right)</em></p>
-</div>
+A [uv](https://docs.astral.sh/uv/)-based Python 3.14+ project template configured for test-driven development (pytest) and code quality checks (Ruff, Pyright running before each commit). Supports development in [`src/`](src/) packages, standalone [`scripts/`](scripts/), and Jupyter [`notebooks/`](notebooks/). Complete IDE setup included for VSCode/Cursor.
 
 ## 📁 Project Structure
 
 Key project directories and files:
 
-```
-uv-template/
-├── src/uv_template/           # Package source code
-├── tests/                     # Test files mirroring src/ structure
-├── notebooks/                 # Jupyter notebooks saving cleanly to Git
-├── scripts/                   # Sometimes you want a standalone script
-├── .vscode/                   # IDE settings and recommended extensions
-├── .claude/                   # Claude Code settings and /commit command
-├── pyproject.toml             # Project dependencies and tool configuration
-├── uv.lock                    # Dependency versions (do not edit manually)
-├── .pre-commit-config.yaml    # Checks that run before every commit for quality
-├── .python-version            # Python version specification for uv
-├── CLAUDE.md                  # Instructions for AI coding assistants
-└── README.md                  # This file
-```
+| Path | Description |
+|------|-------------|
+| [.claude/](.claude/) | Claude Code `CLAUDE.md`, rules, settings, commands etc. |
+| .venv/ | Virtual environment created by `uv sync` (gitignored) |
+| [.vscode/](.vscode/) | IDE settings and recommended extensions |
+| [notebooks/](notebooks/) | Jupyter notebooks saving cleanly to Git |
+| [scripts/](scripts/) | Sometimes you want a standalone script |
+| [src/uv_template/](src/uv_template/) | Package source code |
+| [tests/](tests/) | Test files mirroring src/ structure |
+| [.gitattributes](.gitattributes) | Git line-ending and diff settings |
+| [.gitignore](.gitignore) | Files excluded from version control |
+| [.markdownlint.yaml](.markdownlint.yaml) | Markdown linting configuration |
+| [.pre-commit-config.yaml](.pre-commit-config.yaml) | Auto quality checks before a commit |
+| [.python-version](.python-version) | Python version specification for uv |
+| [pyproject.toml](pyproject.toml) | Project dependencies and tool configuration |
+| [README.md](README.md) | This file |
+| [uv.lock](uv.lock) | Dependency versions (do not edit manually) |
 
 ## 📦 Installation
 
@@ -56,14 +51,21 @@ uv-template/
    - Run `which python` → should show ../.venv/bin/python (project virtual environment)
    - Run `uv run pre-commit run --all-files` → linting, type checking, and tests should pass
 
-5. Install the recommended extensions from [.vscode/extensions.json](.vscode/extensions.json). (These are already configured in [.vscode/settings.json](.vscode/settings.json).)
+5. Install the recommended extensions from [.vscode/extensions.json](.vscode/extensions.json). These are already configured in [.vscode/settings.json](.vscode/settings.json).
+
+6. Open the test notebook, select the `.venv` Python interpreter, and run it.
+
+<div align="center">
+  <a href="notebook_pic.jpg">
+    <img src="notebook_pic.jpg" alt="VS Code screenshot showing test-setup.ipynb notebook with project code integration. The notebook demonstrates importing from uv_template.play and testing the add() function with successful output. Pink arrows point to the kernel selector in the top right, with 'select' annotation indicating where to choose the Python 3.14 (.venv) environment." width="600">
+  </a>
+  <p><em>Project Structure (left) with Jupyter Notebook (right)</em></p>
+</div>
 
 ## ✨ Customisation & Usage
 
-1. Instruct AI (renaming): *Refactor this project to consistently rename it from "uv-template" to "agent-course-google" throughout, use `git mv` for renaming!*
+1. Instruct AI (renaming): *Refactor this project to consistently rename it from "uv-template" to "agent-course-google" throughout. Use `git mv` for renaming!*
 
 2. Instruct AI (changes): *For any project structural changes (e.g., removing `scripts/`), ask AI to refactor consistently throughout.*
 
-3. Use Jupyter notebooks (image above) normally and together with Claude Code
-
-4. Review [CLAUDE.md](CLAUDE.md) for common uv commands and add your own project context
+3. Refine [.claude/CLAUDE.md](.claude/CLAUDE.md) for your own project context.

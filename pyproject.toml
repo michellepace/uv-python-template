@@ -15,20 +15,20 @@ version = "0.1.0"
 description = "Versatile UV Python project setup with TDD, scripts, Jupyter notebooks"
 readme = "README.md"
 authors = [{ name = "Michelle" }]
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = []
 
 [dependency-groups]
 dev = [
     "ipykernel>=7.1.0",
     "jupyter>=1.1.1",
-    "nbdime>=4.0.2",
-    "pandas>=2.3.3",
-    "plotly>=6.4.0",
-    "pre-commit>=4.4.0",
-    "pyright>=1.1.407",
-    "pytest>=9.0.0",
-    "ruff>=0.14.4",
+    "nbdime>=4.0.3",
+    "pandas>=3.0.0",
+    "plotly>=6.5.2",
+    "pre-commit>=4.5.1",
+    "pyright>=1.1.408",
+    "pytest>=9.0.2",
+    "ruff>=0.14.14",
 ]
 
 
@@ -41,7 +41,7 @@ dev = [
 # Cursor Pyright forks BasedPyright, some lint rules overlap with Ruff, causes dupe errors
 
 typeCheckingMode = "standard" # Cursor Pyright default
-pythonVersion = "3.13"
+pythonVersion = "3.14"
 
 # Disable Basedpyright rules that duplicate Ruff
 reportUnusedImport = false      # Ruff F401 handles it
@@ -54,8 +54,8 @@ reportDuplicateImport = false   # Ruff F811 handles it
 # =================================
 [tool.ruff]
 # Strictest ruff settings
-line-length = 90
-target-version = "py313"
+line-length = 88
+target-version = "py314"
 
 [tool.ruff.lint]
 # Enable all available rules
