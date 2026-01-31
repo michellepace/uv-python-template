@@ -17,7 +17,7 @@ Key project directories and files:
 | 📂 | [.vscode/](.vscode/) | [extensions](.vscode/extensions.json) for VSCode/Cursor and IDE [settings](.vscode/settings.json) |
 | 📂 | [notebooks/](notebooks/) | Jupyter notebooks |
 | 📂 | [scripts/](scripts/) | Standalone utility scripts |
-| 📂 | [src/uv_template/](src/uv_template/) | Package source code |
+| 📂 | [src/uv_python_template/](src/uv_python_template/) | Package source code |
 | 📂 | [tests/](tests/) | Test files mirroring src/ structure |
 | 📄 | [.gitattributes](.gitattributes) | Git line-ending, diff, and notebook filter settings |
 | 📄 | [.gitignore](.gitignore) | Files excluded from version control |
@@ -35,7 +35,7 @@ Key project directories and files:
 2. Clone the repository to "my-project-name"
 
    ```bash
-    git clone https://github.com/michellepace/uv-template.git my-project-name
+    git clone https://github.com/michellepace/uv-python-template.git my-project-name
    ```
 
 3. Run these terminal commands for first-time setup:
@@ -61,7 +61,7 @@ Key project directories and files:
 
    <div align="center">
      <a href="notebook_pic.jpg">
-       <img src="notebook_pic.jpg" alt="VS Code screenshot showing example.ipynb notebook with project code integration. The notebook demonstrates importing from uv_template.play and testing the add() function with successful output. Pink arrows point to the kernel selector in the top right, with 'select' annotation indicating where to choose the Python 3.14 (.venv) environment." width="600">
+       <img src="notebook_pic.jpg" alt="VS Code screenshot showing example.ipynb notebook with project code integration. The notebook demonstrates importing from uv_python_template.play and testing the add() function with successful output. Pink arrows point to the kernel selector in the top right, with 'select' annotation indicating where to choose the Python 3.14 (.venv) environment." width="600">
      </a>
      <p><em>Project Structure (left) with Jupyter Notebook (right)</em></p>
    </div>
@@ -95,7 +95,7 @@ Any repo with `*.ipynb filter=nbstripout` in `.gitattributes` (like this one) wi
 
 Use AI prompts to quickly adapt this template to your project:
 
-1. Instruct AI (renaming): *Refactor this project to consistently rename it from "uv-template" to "my-project-name" throughout. Use `git mv` for renaming!*
+1. Instruct AI (renaming): *Refactor this project to consistently rename it from "uv-python-template" to "my-project-name" throughout. Use `git mv` for renaming!*
 
 2. Instruct AI (changes): *I will not be using Jupyter notebooks in this project. Remove all notebook-related files, references, and dependencies throughout.*
 

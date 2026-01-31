@@ -10,7 +10,7 @@ build-backend = "uv_build"
 # Project Metadata & Configuration
 # =================================
 [project]
-name = "uv-template"
+name = "uv-python-template"
 version = "0.1.0"
 description = "Versatile UV Python project setup with TDD, scripts, Jupyter notebooks"
 readme = "README.md"

@@ -1373,7 +1373,7 @@ wheels = [
 ]
 
 [[package]]
-name = "uv-template"
+name = "uv-python-template"
 version = "0.1.0"
 source = { editable = "." }
 
