@@ -26,12 +26,13 @@ repos:
         name: pytest
         entry: uv run pytest
         language: system
-        types: [python]
+        files: \.(py)$|^pyproject\.toml$|^uv\.lock$
         pass_filenames: false
 
 # Notes:
-# 1. `uv-lock` hook automatically updates the lockfile to ensure it matches specs in pyproject.toml
+# 1. `uv-lock` hook re-resolves and regenerates the lockfile to match pyproject.toml
 # 2. `ruff-format` runs before `ruff-check` (format then lint)
 # 3. `--exit-non-zero-on-fix` flag blocks commits when ruff makes automatic fixes, must review first
 # 4. `pyright` runs type checking to catch type errors before commits
-# 5. `pass_filenames: false` makes pytest run all tests rather than only testing modified files
+# 5. `pass_filenames: false` on pytest runs the full test suite rather than only testing modified files
+# 6. pytest also triggers on pyproject.toml/uv.lock changes to catch dependency breakage

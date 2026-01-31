@@ -14,7 +14,7 @@ name = "uv-template"
 version = "0.1.0"
 description = "Versatile UV Python project setup with TDD, scripts, Jupyter notebooks"
 readme = "README.md"
-authors = [{ name = "Michelle" }]
+authors = [{ name = "My Name" }]
 requires-python = ">=3.14"
 dependencies = []
 
@@ -52,13 +52,11 @@ reportDuplicateImport = false   # Ruff F811 handles it
 # Ruff Linter Configuration
 # =================================
 [tool.ruff]
-# Strictest ruff settings
 line-length = 88
 target-version = "py314"
 
 [tool.ruff.lint]
-# Enable all available rules
-select = ["ALL"]
+select = ["ALL"]  # Strictest: enable all available rules
 # Only ignore rules that are incompatible or overly pedantic
 ignore = [
     "D100",    # Missing docstring in public module
@@ -98,3 +96,12 @@ max-statements = 50
 
 [tool.ruff.lint.mccabe]
 max-complexity = 10
+
+
+# =================================
+# Pytest Configuration
+# =================================
+[tool.pytest.ini_options]
+markers = [
+    "integration: tests that require external services (and generally slow to run)",
+]
