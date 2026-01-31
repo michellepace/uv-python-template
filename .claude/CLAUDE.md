@@ -4,6 +4,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Use British spelling throughout.
 
+## Project Purpose
+
+A uv-based Python 3.14+ project template configured for test-driven development and code quality checks. Provides a ready-to-use structure for packages (`src/`), standalone scripts (`scripts/`), and Jupyter notebooks (`notebooks/`), with pre-commit hooks running Ruff, Pyright, and pytest on every commit.
+
+## Tech Stack
+
+- **Python 3.14+** with **uv** package manager
+- **Ruff** — linting (all rules enabled) and formatting
+- **Pyright** — type checking
+- **pytest** — testing
+- **pre-commit** — automated quality checks
+- **ipykernel** / **nbdime** — Jupyter notebook support
+- **pandas** / **plotly** — included as example data dependencies
+
 ## Project Structure
 
 UV-based Python 3.14+ template with TDD workflow:

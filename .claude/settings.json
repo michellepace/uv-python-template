@@ -1,20 +1,25 @@
 {
     "permissions": {
       "allow": [
-        "Bash(uv:*)",
-
-        "Bash(awk:*)",
-        "Bash(cat:*)",
-        "Bash(echo:*)",
-        "Bash(find:*)",
-        "Bash(git log:*)",
+        "Bash(claude mcp get:*)",
+        "Bash(claude mcp list)",
+        "Bash(gh pr checks:*)",
+        "Bash(gh pr list:*)",
+        "Bash(gh pr view:*)",
+        "Bash(gh run list:*)",
+        "Bash(gh run view:*)",
         "Bash(git config:*)",
-        "Bash(grep:*)",
-        "Bash(head:*)",
+        "Bash(git diff:*)",
+        "Bash(git log:*)",
         "Bash(ls:*)",
-        "Bash(tail:*)",
+        "Bash(lsof:*)",
         "Bash(test:*)",
-        "Bash(wc:*)"
+        "Bash(tree:*)",
+        "Bash(uv:*)",
+        "Bash(wc:*)",
+        "Bash(xargs:*)",
+
+        "mcp__ide__getDiagnostics"
       ],
       "deny": [
         "Read(**/.env)",
