@@ -1,32 +1,36 @@
-# UV Template for Python Projects
+# Python Project Template
 
-A [uv](https://docs.astral.sh/uv/)-based Python 3.14+ project template configured for test-driven development (pytest) and code quality checks (Ruff, Pyright running before each commit). Supports development in [`src/`](src/) packages, standalone [`scripts/`](scripts/), and Jupyter [`notebooks/`](notebooks/). Complete IDE setup included for VSCode/Cursor.
+![Banner showing uv package manager logo, "Python Template Project" text, and Python logo](x_docs/images/readme-banner.jpg)
+
+A [uv](https://docs.astral.sh/uv/)-based Python 3.14+ project template configured for test-driven development (pytest) and code quality checks (Ruff, Pyright). These run automatically every time you commit.
+
+Supports development in [`src/`](src/) packages, standalone [`scripts/`](scripts/), and Jupyter [`notebooks/`](notebooks/). Complete IDE setup included for VSCode/Cursor ([extensions](.vscode/extensions.json), [settings](.vscode/settings.json)).
 
 ## 📁 Project Structure
 
 Key project directories and files:
 
-| Path | Description |
-|------|-------------|
-| [.claude/](.claude/) | Claude Code `CLAUDE.md`, rules, settings, commands etc. |
-| .venv/ | Virtual environment created by `uv sync` (gitignored) |
-| [.vscode/](.vscode/) | IDE settings and recommended extensions |
-| [notebooks/](notebooks/) | Jupyter notebooks saving cleanly to Git |
-| [scripts/](scripts/) | Sometimes you want a standalone script |
-| [src/uv_template/](src/uv_template/) | Package source code |
-| [tests/](tests/) | Test files mirroring src/ structure |
-| [.gitattributes](.gitattributes) | Git line-ending and diff settings |
-| [.gitignore](.gitignore) | Files excluded from version control |
-| [.markdownlint.yaml](.markdownlint.yaml) | Markdown linting configuration |
-| [.pre-commit-config.yaml](.pre-commit-config.yaml) | Auto quality checks before a commit |
-| [.python-version](.python-version) | Python version specification for uv |
-| [pyproject.toml](pyproject.toml) | Project dependencies and tool configuration |
-| [README.md](README.md) | This file |
-| [uv.lock](uv.lock) | Dependency versions (do not edit manually) |
+| | Name | Description |
+|:-:|------|-------------|
+| 📂 | [.claude/](.claude/) | Claude Code configuration and project instructions |
+| 📂 | .venv/ | Virtual environment created by `uv sync` (gitignored) |
+| 📂 | [.vscode/](.vscode/) | [extensions](.vscode/extensions.json) for VSCode/Cursor and IDE [settings](.vscode/settings.json) |
+| 📂 | [notebooks/](notebooks/) | Jupyter notebooks |
+| 📂 | [scripts/](scripts/) | Standalone utility scripts |
+| 📂 | [src/uv_template/](src/uv_template/) | Package source code |
+| 📂 | [tests/](tests/) | Test files mirroring src/ structure |
+| 📄 | [.gitattributes](.gitattributes) | Git line-ending, diff, and notebook filter settings |
+| 📄 | [.gitignore](.gitignore) | Files excluded from version control |
+| 📄 | [.markdownlint.yaml](.markdownlint.yaml) | Markdown linting configuration |
+| 📄 | [.pre-commit-config.yaml](.pre-commit-config.yaml) | Automated quality checks before each commit |
+| 📄 | [.python-version](.python-version) | Python version specification for uv |
+| 📄 | [pyproject.toml](pyproject.toml) | Project dependencies and tool configuration |
+| 📄 | [README.md](README.md) | This file |
+| 📄 | [uv.lock](uv.lock) | Dependency versions (do not edit manually) |
 
 ## 📦 Installation
 
-1. Pre-requisite: install the uv Python package manager [from here](https://docs.astral.sh/uv/getting-started/installation/)
+1. Prerequisite: install the uv Python package manager [from here](https://docs.astral.sh/uv/getting-started/installation/)
 
 2. Clone the repository to "my-project-name"
 
@@ -47,20 +51,20 @@ Key project directories and files:
     uv run pre-commit install
     ```
 
-4. Open "my-project-name" in your IDE and open a NEW terminal:
-   - Run `which python` → should show ../.venv/bin/python (project virtual environment)
+4. Open "my-project-name" in your IDE and open a new terminal (so it picks up the virtual environment):
+   - Run `which python` → should show a path ending in `.venv/bin/python`
    - Run `uv run pre-commit run --all-files` → linting, type checking, and tests should pass
 
 5. Install the recommended extensions from [.vscode/extensions.json](.vscode/extensions.json). These are already configured in [.vscode/settings.json](.vscode/settings.json).
 
-6. Open the test notebook, select the `.venv` Python interpreter, and run it.
+6. Open [`notebooks/example.ipynb`](notebooks/example.ipynb), select the `.venv` Python interpreter, and run it.
 
-  <div align="center">
-    <a href="notebook_pic.jpg">
-      <img src="notebook_pic.jpg" alt="VS Code screenshot showing test-setup.ipynb notebook with project code integration. The notebook demonstrates importing from uv_template.play and testing the add() function with successful output. Pink arrows point to the kernel selector in the top right, with 'select' annotation indicating where to choose the Python 3.14 (.venv) environment." width="600">
-    </a>
-    <p><em>Project Structure (left) with Jupyter Notebook (right)</em></p>
-  </div>
+   <div align="center">
+     <a href="notebook_pic.jpg">
+       <img src="notebook_pic.jpg" alt="VS Code screenshot showing example.ipynb notebook with project code integration. The notebook demonstrates importing from uv_template.play and testing the add() function with successful output. Pink arrows point to the kernel selector in the top right, with 'select' annotation indicating where to choose the Python 3.14 (.venv) environment." width="600">
+     </a>
+     <p><em>Project Structure (left) with Jupyter Notebook (right)</em></p>
+   </div>
 
 7. [Set up Jupyter Git integration (Recommended)](#-jupyter-notebook-git-integration-recommended) — keeps notebook outputs out of version control while preserving them locally.
 
@@ -87,10 +91,12 @@ nbstripout --install --global
 
 Any repo with `*.ipynb filter=nbstripout` in `.gitattributes` (like this one) will now automatically strip outputs on commit.
 
-## ✨ Customisation & Usage
+## ✨ Make It Yours
 
-1. Instruct AI (renaming): *Refactor this project to consistently rename it from "uv-template" to "agent-course-google" throughout. Use `git mv` for renaming!*
+Use AI prompts to quickly adapt this template to your project:
 
-2. Instruct AI (changes): *For any project structural changes (e.g., removing `scripts/`), ask AI to refactor consistently throughout.*
+1. Instruct AI (renaming): *Refactor this project to consistently rename it from "uv-template" to "my-project-name" throughout. Use `git mv` for renaming!*
 
-3. Refine [.claude/CLAUDE.md](.claude/CLAUDE.md) for your own project context.
+2. Instruct AI (changes): *I will not be using Jupyter notebooks in this project. Remove all notebook-related files, references, and dependencies throughout.*
+
+3. Manually refine [.claude/CLAUDE.md](.claude/CLAUDE.md) to suit your preferences and project.
